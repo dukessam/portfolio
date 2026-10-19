@@ -34,9 +34,9 @@ window.PORTFOLIO_CONTENT = {
       "alt": "Intimate close-up of a face with one eye sharply lit"
     },
     {
-      "file": "farachatoune-preview",
-      "caption": "FARACHATOUNE — BOOYA / 2026",
-      "alt": "A performer in a light costume moving outdoors against a sunset sky"
+      "file": "station-36",
+      "caption": "STATION 36 / 2021",
+      "alt": "A brightly lit cafe where staff prepare decorations for a celebration"
     }
   ],
   "stills": [
@@ -249,18 +249,6 @@ window.PORTFOLIO_CONTENT = {
       "project": "station-36",
       "alt": "A group gathering inside a decorated cafe",
       "number": 1
-    },
-    {
-      "file": "recent-grading",
-      "project": "recent-music-video",
-      "alt": "Fih Bouya by Aicha Mado — cover design placeholder until film stills are supplied",
-      "number": 1
-    },
-    {
-      "file": "farachatoune-preview",
-      "project": "farachatoune",
-      "alt": "Still from Farachatoune, upcoming BOOYA music video, directed, edited and color graded by Essam Doukhou",
-      "number": 1
     }
   ],
   "featuredOrder": [
@@ -268,7 +256,6 @@ window.PORTFOLIO_CONTENT = {
     "35",
     "27",
     "48",
-    "farachatoune-preview",
     "0",
     "36",
     "25",
@@ -341,7 +328,7 @@ window.PORTFOLIO_CONTENT = {
         "color"
       ],
       "videoId": "6IA6a0pm_i8",
-      "cover": "recent-grading",
+      "cover": null,
       "description": "Music video by Aicha Mado. I worked on the color grading.",
       "credits": [
         [
@@ -356,7 +343,8 @@ window.PORTFOLIO_CONTENT = {
           "Color grading",
           "Essam Doukhou"
         ]
-      ]
+      ],
+      "awaitingStills": true
     },
     {
       "id": "farachatoune",
@@ -370,8 +358,8 @@ window.PORTFOLIO_CONTENT = {
         "color"
       ],
       "videoId": null,
-      "cover": "farachatoune-preview",
-      "description": "An upcoming music video by BOOYA. I directed, edited and color graded it. A still from the project is shown here; the full video has not been released.",
+      "cover": null,
+      "description": "An unreleased music video by BOOYA. I directed, edited and color graded it.",
       "unreleased": true,
       "credits": [
         [
@@ -390,7 +378,8 @@ window.PORTFOLIO_CONTENT = {
           "Status",
           "Unreleased · 2026"
         ]
-      ]
+      ],
+      "awaitingStills": true
     },
     {
       "id": "poetry-sahara",

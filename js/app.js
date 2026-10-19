@@ -87,6 +87,7 @@
   let projectOpener=null;
   function showProjectStill(index){
     const frames=projectStills(activeProject.id);
+    if(!frames.length)return;
     detailSelection=(index+frames.length)%frames.length;
     const selected=frames[detailSelection];
     $('project-dialog-image').src=stillSrc(selected.file);
@@ -109,14 +110,21 @@
     const frames=projectStills(p.id);
     $('project-image-grid').innerHTML=frames.map((f,i)=>`<button type="button" class="detail-frame" data-detail-index="${i}" aria-label="View still ${i+1} of ${frames.length}"><img src="${stillSrc(f.file,true)}" alt="${esc(f.alt)}" loading="lazy"></button>`).join('');
     $('project-image-grid').querySelectorAll('[data-detail-index]').forEach(b=>b.addEventListener('click',()=>showProjectStill(Number(b.dataset.detailIndex))));
-    detailSelection=0;showProjectStill(Math.max(0,frames.findIndex(f=>f.file===p.cover)));
+    const hasFrames=frames.length>0;
+    document.querySelector('.detail-cover').classList.toggle('is-awaiting-stills',!hasFrames);
+    $('project-dialog-image').hidden=!hasFrames;
+    $('project-dialog-image-counter').hidden=!hasFrames;
+    $('project-dialog-empty').hidden=hasFrames;
+    if(!hasFrames)$('project-dialog-image').removeAttribute('src');
+    detailSelection=0;
+    if(hasFrames)showProjectStill(Math.max(0,frames.findIndex(f=>f.file===p.cover)));
     $('project-watch').hidden=!p.videoId;
     detailDialog.showModal();document.body.classList.add('dialog-open');$('project-close').focus();
   }
   function renderProjects(){
     const visible=c.projects.filter(p=>filmFilter==='all'||p.tags.includes(filmFilter));
     $('project-grid').innerHTML=visible.map(p=>`<button type="button" class="project-card" data-project="${esc(p.id)}" aria-label="View ${esc(p.title)} project">
-      <span class="project-art"><img src="${stillSrc(p.cover)}" srcset="${stillSrc(p.cover,true)} 800w, ${stillSrc(p.cover)} 1600w" sizes="(max-width: 600px) 100vw, 48vw" alt="${p.id==='recent-music-video'?'Typographic placeholder for Fih Bouya by Aicha Mado':`Film still from ${esc(p.title)}`}" loading="lazy"><span class="project-type">${esc(p.format)}</span>${p.unreleased?'<span class="project-private">UNRELEASED</span>':''}<span class="project-icon" aria-hidden="true">↗</span></span>
+      <span class="project-art${p.cover?'':' is-awaiting-stills'}">${p.cover?`<img src="${stillSrc(p.cover)}" srcset="${stillSrc(p.cover,true)} 800w, ${stillSrc(p.cover)} 1600w" sizes="(max-width: 600px) 100vw, 48vw" alt="Film still from ${esc(p.title)}" loading="lazy">`:'<span class="project-no-preview">STILLS TO FOLLOW</span>'}<span class="project-type">${esc(p.format)}</span>${p.unreleased?'<span class="project-private">UNRELEASED</span>':''}<span class="project-icon" aria-hidden="true">↗</span></span>
       <span class="project-copy"><span><span class="project-name">${esc(p.title)}</span><span class="project-role">${esc(p.role)}</span></span><span class="project-year">${esc(p.year)}</span></span></button>`).join('');
     $('project-grid').querySelectorAll('[data-project]').forEach(b=>b.addEventListener('click',()=>{
       const p=projectById(b.dataset.project);if(p)openProject(p,b);
