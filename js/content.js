@@ -14,29 +14,29 @@ window.PORTFOLIO_CONTENT = {
   },
   "heroSlides": [
     {
-      "file": "6",
+      "file": "0",
       "caption": "SACRED UNION / 2022",
-      "alt": "A lone performer framed by fire and smoke"
+      "alt": "Two performers silhouetted in a lifting pose against a twilight sky"
     },
     {
-      "file": "41",
-      "caption": "POETRY & MUSIC / SAHARA",
-      "alt": "Musicians seated together and performing on a sand dune"
+      "file": "36",
+      "caption": "POETRY AND MUSIC OF THE SAHARA / 2020",
+      "alt": "A figure in blue Saharan clothing walking through a sunlit desert landscape"
     },
     {
-      "file": "27",
+      "file": "25",
       "caption": "WELD SAHRA / 2023",
-      "alt": "A singer in a pale pink suit beneath a blue sky"
+      "alt": "Fantasia riders charging forward through smoke with Moroccan flags"
     },
     {
-      "file": "46",
-      "caption": "THE STAR / 2019",
-      "alt": "A soft-focus cinematic group shot from the television film"
+      "file": "49",
+      "caption": "ANTI-DREAM PILLS / 2017",
+      "alt": "Intimate close-up of a face with one eye sharply lit"
     },
     {
-      "file": "dual-horizon",
-      "caption": "DUAL HORIZON / 2024",
-      "alt": "A robed figure in an exterior landscape beside a hand-built installation"
+      "file": "farachatoune-preview",
+      "caption": "FARACHATOUNE — BOOYA / 2026",
+      "alt": "A performer in a light costume moving outdoors against a sunset sky"
     }
   ],
   "stills": [
@@ -264,25 +264,28 @@ window.PORTFOLIO_CONTENT = {
     }
   ],
   "featuredOrder": [
+    "1",
+    "35",
+    "27",
+    "48",
+    "farachatoune-preview",
+    "0",
+    "36",
+    "25",
+    "49",
+    "3",
+    "42",
     "6",
     "41",
-    "27",
     "46",
-    "1",
-    "49",
     "dual-horizon",
     "station-36",
     "33",
-    "25",
     "50",
-    "0",
-    "42",
     "34",
     "2",
     "43",
-    "48",
     "20",
-    "36",
     "8",
     "13",
     "38",
@@ -292,12 +295,10 @@ window.PORTFOLIO_CONTENT = {
     "12",
     "21",
     "29",
-    "3",
     "31",
     "37",
     "28",
     "32",
-    "35",
     "39"
   ],
   "projects": [
@@ -312,7 +313,7 @@ window.PORTFOLIO_CONTENT = {
         "color"
       ],
       "videoId": "6N7FtCLsBjw",
-      "cover": "6",
+      "cover": "1",
       "description": "An art video made with Canadian performance artist Annie Gagnon. I edited and color graded the performance."
     },
     {
@@ -402,7 +403,7 @@ window.PORTFOLIO_CONTENT = {
         "color"
       ],
       "videoId": "8aifIwIpvwk",
-      "cover": "41",
+      "cover": "35",
       "description": "A feature documentary about Saharan poetry, music and the people who keep these traditions alive. I worked on the editing and color grading."
     },
     {
