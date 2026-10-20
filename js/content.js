@@ -1,4 +1,4 @@
-/* Essam Doukhou — public portfolio content. Update project titles, stills, videos, and contact details here. */
+/* Essam Doukhou — public portfolio content. */
 window.PORTFOLIO_CONTENT = {
   "contact": {
     "email": "essamdoukhou@gmail.com",
@@ -14,29 +14,54 @@ window.PORTFOLIO_CONTENT = {
   },
   "heroSlides": [
     {
-      "file": "0",
+      "file": "1",
       "caption": "SACRED UNION / 2022",
-      "alt": "Two performers silhouetted in a lifting pose against a twilight sky"
-    },
-    {
-      "file": "36",
-      "caption": "POETRY AND MUSIC OF THE SAHARA / 2020",
-      "alt": "A figure in blue Saharan clothing walking through a sunlit desert landscape"
+      "alt": "Two performers framed in a doorway with flowing pink fabric"
     },
     {
       "file": "25",
       "caption": "WELD SAHRA / 2023",
-      "alt": "Fantasia riders charging forward through smoke with Moroccan flags"
+      "alt": "Horsemen riding in a fantasia through smoke"
+    },
+    {
+      "file": "41",
+      "caption": "POETRY AND MUSIC OF THE SAHARA / 2020",
+      "alt": "Musicians seated together and performing on a sand dune"
     },
     {
       "file": "49",
       "caption": "ANTI-DREAM PILLS / 2017",
-      "alt": "Intimate close-up of a face with one eye sharply lit"
+      "alt": "Tight close-up of a person’s eyes in low-key light"
     },
     {
       "file": "station-36",
       "caption": "STATION 36 / 2021",
-      "alt": "A brightly lit cafe where staff prepare decorations for a celebration"
+      "alt": "A group gathering inside a decorated cafe"
+    },
+    {
+      "file": "dual-horizon",
+      "caption": "DUAL HORIZON / 2024",
+      "alt": "A robed figure in an exterior landscape beside a hand-built installation"
+    },
+    {
+      "file": "46",
+      "caption": "THE STAR / 2019",
+      "alt": "A soft-focus cinematic group shot from the television film"
+    },
+    {
+      "file": "11",
+      "caption": "SACRED UNION / 2022",
+      "alt": "Dancer holding an open expressive pose beneath a pale sky"
+    },
+    {
+      "file": "36",
+      "caption": "POETRY AND MUSIC OF THE SAHARA / 2020",
+      "alt": "A figure draped in blue fabric among desert trees"
+    },
+    {
+      "file": "27",
+      "caption": "WELD SAHRA / 2023",
+      "alt": "A singer in a pale pink suit beneath a blue sky"
     }
   ],
   "stills": [
@@ -391,7 +416,7 @@ window.PORTFOLIO_CONTENT = {
         "editing",
         "color"
       ],
-      "videoId": "8aifIwIpvwk",
+      "videoId": "G7FEr_U2byQ",
       "cover": "35",
       "description": "A feature documentary about Saharan poetry, music and the people who keep these traditions alive. I worked on the editing and color grading."
     },
@@ -404,9 +429,10 @@ window.PORTFOLIO_CONTENT = {
       "tags": [
         "direction"
       ],
-      "videoId": "ARRZbJmjeco",
+      "videoId": "kBuHJx_N-sA",
       "cover": "46",
-      "description": "A television film made for Al Aoula with Casablanca Pictures. I co-wrote and directed it."
+      "description": "A television film made for Al Aoula with Casablanca Pictures. I co-wrote and directed it.",
+      "videoLabel": "WATCH TRAILER"
     },
     {
       "id": "anti-dream",
@@ -417,7 +443,7 @@ window.PORTFOLIO_CONTENT = {
       "tags": [
         "direction"
       ],
-      "videoId": "CqW3odJvxUo",
+      "videoId": "B9bU5wojE5s",
       "cover": "49",
       "description": "A short fiction film I wrote and directed, supported by the FIFM Foundation."
     },
