@@ -119,6 +119,7 @@
     detailSelection=0;
     if(hasFrames)showProjectStill(Math.max(0,frames.findIndex(f=>f.file===p.cover)));
     $('project-watch').hidden=!p.videoId;
+    $('project-watch').innerHTML=esc(p.videoLabel || 'WATCH VIDEO')+' <span aria-hidden="true">▶</span>';
     detailDialog.showModal();document.body.classList.add('dialog-open');$('project-close').focus();
   }
   function renderProjects(){
