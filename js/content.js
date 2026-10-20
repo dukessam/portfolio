@@ -626,7 +626,7 @@ window.PORTFOLIO_CONTENT = {
         "color"
       ],
       "videoId": "6N7FtCLsBjw",
-      "cover": "3",
+      "cover": "sacred-union-new-05",
       "description": "An art video made with Canadian performance artist Annie Gagnon. I edited and color graded the performance."
     },
     {
@@ -718,7 +718,7 @@ window.PORTFOLIO_CONTENT = {
         "color"
       ],
       "videoId": "G7FEr_U2byQ",
-      "cover": "41",
+      "cover": "34",
       "description": "A feature documentary about Saharan poetry, music and the people who keep these traditions alive. I worked on the editing and color grading."
     },
     {
