@@ -14,9 +14,9 @@ window.PORTFOLIO_CONTENT = {
   },
   "heroSlides": [
     {
-      "file": "1",
+      "file": "3",
       "caption": "SACRED UNION / 2022",
-      "alt": "Two performers framed in a doorway with flowing pink fabric"
+      "alt": "A solitary silhouette among candlelights at dusk"
     },
     {
       "file": "25",
@@ -45,7 +45,7 @@ window.PORTFOLIO_CONTENT = {
     },
     {
       "file": "46",
-      "caption": "THE STAR / 2019",
+      "caption": "THE STAR / AL NAJM / 2019",
       "alt": "A soft-focus cinematic group shot from the television film"
     },
     {
@@ -277,21 +277,22 @@ window.PORTFOLIO_CONTENT = {
     }
   ],
   "featuredOrder": [
-    "1",
-    "35",
-    "27",
-    "48",
-    "0",
-    "36",
+    "3",
+    "41",
     "25",
     "49",
-    "3",
+    "station-36",
+    "dual-horizon",
+    "46",
+    "11",
+    "36",
+    "27",
+    "1",
+    "35",
+    "48",
+    "0",
     "42",
     "6",
-    "41",
-    "46",
-    "dual-horizon",
-    "station-36",
     "33",
     "50",
     "34",
@@ -301,7 +302,6 @@ window.PORTFOLIO_CONTENT = {
     "8",
     "13",
     "38",
-    "11",
     "22",
     "19",
     "12",
@@ -325,7 +325,7 @@ window.PORTFOLIO_CONTENT = {
         "color"
       ],
       "videoId": "6N7FtCLsBjw",
-      "cover": "1",
+      "cover": "3",
       "description": "An art video made with Canadian performance artist Annie Gagnon. I edited and color graded the performance."
     },
     {
@@ -417,7 +417,7 @@ window.PORTFOLIO_CONTENT = {
         "color"
       ],
       "videoId": "G7FEr_U2byQ",
-      "cover": "35",
+      "cover": "41",
       "description": "A feature documentary about Saharan poetry, music and the people who keep these traditions alive. I worked on the editing and color grading."
     },
     {
