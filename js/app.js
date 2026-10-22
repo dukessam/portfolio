@@ -8,6 +8,17 @@
   const stills = c.featuredOrder.map(id => c.stills.find(f => f.file === id)).filter(Boolean);
   const projectById = id => c.projects.find(p => p.id === id);
   const projectStills = id => c.stills.filter(f => f.project === id);
+  const I = window.PORTFOLIO_I18N;
+  const tt = (key, vars) => I?.text(key, vars) ?? key;
+  const tr = p => I?.project(p) ?? p;
+  const projectName = p => tr(p).title;
+  const stillAlt = f => I?.getLang() === 'en' ? f.alt : tt('stillFrom',{project:projectName(projectById(f.project))});
+  const slideCaption = slide => {
+    if (I?.getLang() === 'en') return slide.caption;
+    const frame=c.stills.find(f=>f.file===slide.file);
+    const p=frame?projectById(frame.project):null;
+    return p?projectName(p)+' / '+p.year:slide.caption;
+  };
   let heroIdx = 0;
   let photoIdx = 0;
   let currentGallery = [];
@@ -18,8 +29,8 @@
   // Mobile navigation
   const trigger = document.querySelector('.nav-trigger');
   const nav = $('main-nav');
-  const closeNav = () => {trigger.setAttribute('aria-expanded','false');trigger.setAttribute('aria-label','Open navigation');nav.classList.remove('open');document.body.classList.remove('menu-open');};
-  trigger.addEventListener('click',()=>{const open = trigger.getAttribute('aria-expanded') !== 'true';trigger.setAttribute('aria-expanded',String(open));trigger.setAttribute('aria-label',open?'Close navigation':'Open navigation');nav.classList.toggle('open',open);document.body.classList.toggle('menu-open',open);});
+  const closeNav = () => {trigger.setAttribute('aria-expanded','false');trigger.setAttribute('aria-label',tt('openNavigation'));nav.classList.remove('open');document.body.classList.remove('menu-open');};
+  trigger.addEventListener('click',()=>{const open = trigger.getAttribute('aria-expanded') !== 'true';trigger.setAttribute('aria-expanded',String(open));trigger.setAttribute('aria-label',open?tt('closeNavigation'):tt('openNavigation'));nav.classList.toggle('open',open);document.body.classList.toggle('menu-open',open);});
   nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeNav));
   window.addEventListener('resize',()=>{if(window.innerWidth>800) closeNav();});
 
@@ -30,7 +41,7 @@
     const slide = c.heroSlides[heroIdx];
     hero.classList.add('changing');
     const next = new Image();
-    next.onload = () => {hero.src = next.src;hero.alt=slide.alt;$('hero-index').textContent=String(heroIdx+1).padStart(2,'0');$('hero-caption').textContent=slide.caption;hero.classList.remove('changing');};
+    next.onload = () => {hero.src = next.src;hero.alt=I?.getLang()==='en'?slide.alt:tt('stillFrom',{project:slideCaption(slide)});$('hero-index').textContent=String(heroIdx+1).padStart(2,'0');$('hero-caption').textContent=slideCaption(slide);hero.classList.remove('changing');};
     next.onerror = () => hero.classList.remove('changing');
     next.src=stillSrc(slide.file);
   };
@@ -44,15 +55,15 @@
     const visible=galleryExpanded?filtered:filtered.slice(0,10);
     currentGallery=filtered;
     $('frames-grid').innerHTML=visible.map((f,i)=>{
-      const p=projectById(f.project);
-      return `<button type="button" class="frame ${i===0?'full':''}" data-frame-index="${i}" aria-label="View ${esc(p.title)} still ${f.number}">
-       <span class="frame-image-wrap"><img src="${stillSrc(f.file)}" srcset="${stillSrc(f.file,true)} 800w, ${stillSrc(f.file)} 1600w" sizes="(max-width: 560px) 95vw, ${i===0?'95vw':'48vw'}" alt="${esc(f.alt)}" width="1600" height="900" loading="${i===0?'eager':'lazy'}"><span class="frame-overlay"></span><span class="frame-number">${esc(p.title.toUpperCase())} / ${p.year}</span><span class="frame-open">↗</span></span>
-       <span class="frame-under"><span>${esc(p.title.toUpperCase())}</span><span>STILL / ${String(f.number).padStart(2,'0')}</span></span></button>`;
+      const p=tr(projectById(f.project));
+      return `<button type="button" class="frame ${i===0?'full':''}" data-frame-index="${i}" aria-label="${esc(tt('viewStill',{project:p.title,n:f.number}))}">
+       <span class="frame-image-wrap"><img src="${stillSrc(f.file)}" srcset="${stillSrc(f.file,true)} 800w, ${stillSrc(f.file)} 1600w" sizes="(max-width: 560px) 95vw, ${i===0?'95vw':'48vw'}" alt="${esc(stillAlt(f))}" width="1600" height="900" loading="${i===0?'eager':'lazy'}"><span class="frame-overlay"></span><span class="frame-number">${esc(p.title.toUpperCase())} / ${p.year}</span><span class="frame-open">↗</span></span>
+       <span class="frame-under"><span>${esc(p.title.toUpperCase())}</span><span>${esc(tt('still'))} / ${String(f.number).padStart(2,'0')}</span></span></button>`;
     }).join('');
     $('frames-grid').querySelectorAll('[data-frame-index]').forEach(b=>b.addEventListener('click',()=>openPhoto(Number(b.dataset.frameIndex),b)));
     const expand=$('expand-gallery');
     expand.hidden=filtered.length<=10;
-    expand.innerHTML=galleryExpanded?'SHOW FEWER FRAMES <span aria-hidden="true">↑</span>':`VIEW ALL ${filtered.length} FRAMES <span aria-hidden="true">↗</span>`;
+    expand.innerHTML=galleryExpanded?`${esc(tt('showFewer'))} <span aria-hidden="true">↑</span>`:`${esc(tt('viewAll',{count:filtered.length}))} <span aria-hidden="true">↗</span>`;
   }
   document.querySelectorAll('[data-frame-filter]').forEach(b=>b.addEventListener('click',()=>{
     galleryFilter=b.dataset.frameFilter;galleryExpanded=false;
@@ -63,10 +74,10 @@
   function showPhoto(){
     const f=currentGallery[photoIdx];
     $('photo-dialog-image').src=stillSrc(f.file);
-    $('photo-dialog-image').alt=f.alt;
-    $('photo-dialog-label').textContent=`SELECTED FRAME / ${String(photoIdx+1).padStart(2,'0')} OF ${String(currentGallery.length).padStart(2,'0')}`;
-    const p=projectById(f.project);
-    $('photo-dialog-caption').textContent=`${p.title.toUpperCase()} / ${p.year} — STILL ${String(f.number).padStart(2,'0')} OF ${String(projectStills(f.project).length).padStart(2,'0')}`;
+    $('photo-dialog-image').alt=stillAlt(f);
+    $('photo-dialog-label').textContent=`${tt('selectedFrame')} / ${String(photoIdx+1).padStart(2,'0')} ${tt('of')} ${String(currentGallery.length).padStart(2,'0')}`;
+    const p=tr(projectById(f.project));
+    $('photo-dialog-caption').textContent=`${p.title.toUpperCase()} / ${p.year} — ${tt('still')} ${String(f.number).padStart(2,'0')} ${tt('of')} ${String(projectStills(f.project).length).padStart(2,'0')}`;
   }
   function openPhoto(index,opener){lastFocus=opener;photoIdx=index;showPhoto();photoDialog.showModal();document.body.classList.add('dialog-open');$('photo-close').focus();}
   const changePhoto = delta =>{photoIdx=(photoIdx+delta+currentGallery.length)%currentGallery.length;showPhoto();};
@@ -91,7 +102,7 @@
     detailSelection=(index+frames.length)%frames.length;
     const selected=frames[detailSelection];
     $('project-dialog-image').src=stillSrc(selected.file);
-    $('project-dialog-image').alt=selected.alt;
+    $('project-dialog-image').alt=stillAlt(selected);
     $('project-dialog-image-counter').textContent=`${String(detailSelection+1).padStart(2,'0')} / ${String(frames.length).padStart(2,'0')}`;
     $('project-image-grid').querySelectorAll('button').forEach((b,i)=>{b.classList.toggle('active',i===detailSelection);b.setAttribute('aria-pressed',String(i===detailSelection));});
   }
@@ -99,16 +110,17 @@
     lastFocus=opener;
     projectOpener=opener;
     activeProject=p;
-    $('project-dialog-format').textContent=p.format;
-    $('project-dialog-title').textContent=p.title;
-    $('project-dialog-role').textContent=p.role;
-    $('project-dialog-year').textContent=p.year;
-    $('project-dialog-description').textContent=p.description;
+    const v=tr(p);
+    $('project-dialog-format').textContent=v.format;
+    $('project-dialog-title').textContent=v.title;
+    $('project-dialog-role').textContent=v.role;
+    $('project-dialog-year').textContent=v.year;
+    $('project-dialog-description').textContent=v.description;
     const creditBox=$('project-dialog-credits');
     creditBox.hidden=!(p.credits&&p.credits.length);
-    creditBox.innerHTML=(p.credits||[]).map(([label,value])=>`<div><span>${esc(label)}</span><strong>${esc(value)}</strong></div>`).join('');
+    creditBox.innerHTML=(v.credits||[]).map(([label,value])=>`<div><span>${esc(label)}</span><strong>${esc(value)}</strong></div>`).join('');
     const frames=projectStills(p.id);
-    $('project-image-grid').innerHTML=frames.map((f,i)=>`<button type="button" class="detail-frame" data-detail-index="${i}" aria-label="View still ${i+1} of ${frames.length}"><img src="${stillSrc(f.file,true)}" alt="${esc(f.alt)}" loading="lazy"></button>`).join('');
+    $('project-image-grid').innerHTML=frames.map((f,i)=>`<button type="button" class="detail-frame" data-detail-index="${i}" aria-label="${esc(tt('viewDetail',{n:i+1,count:frames.length}))}"><img src="${stillSrc(f.file,true)}" alt="${esc(stillAlt(f))}" loading="lazy"></button>`).join('');
     $('project-image-grid').querySelectorAll('[data-detail-index]').forEach(b=>b.addEventListener('click',()=>showProjectStill(Number(b.dataset.detailIndex))));
     const hasFrames=frames.length>0;
     document.querySelector('.detail-cover').classList.toggle('is-awaiting-stills',!hasFrames);
@@ -119,14 +131,17 @@
     detailSelection=0;
     if(hasFrames)showProjectStill(Math.max(0,frames.findIndex(f=>f.file===p.cover)));
     $('project-watch').hidden=!p.videoId;
-    $('project-watch').innerHTML=esc(p.videoLabel || 'WATCH VIDEO')+' <span aria-hidden="true">▶</span>';
+    $('project-watch').innerHTML=esc(tt(p.videoLabel==='WATCH TRAILER'?'watchTrailer':'watchVideo'))+' <span aria-hidden="true">▶</span>';
     detailDialog.showModal();document.body.classList.add('dialog-open');$('project-close').focus();
   }
   function renderProjects(){
     const visible=c.projects.filter(p=>filmFilter==='all'||p.tags.includes(filmFilter));
-    $('project-grid').innerHTML=visible.map(p=>`<button type="button" class="project-card" data-project="${esc(p.id)}" aria-label="View ${esc(p.title)} project">
-      <span class="project-art${p.cover?'':' is-awaiting-stills'}">${p.cover?`<img src="${stillSrc(p.cover)}" srcset="${stillSrc(p.cover,true)} 800w, ${stillSrc(p.cover)} 1600w" sizes="(max-width: 600px) 100vw, 48vw" alt="Film still from ${esc(p.title)}" loading="lazy">`:'<span class="project-no-preview">STILLS TO FOLLOW</span>'}<span class="project-type">${esc(p.format)}</span>${p.unreleased?'<span class="project-private">UNRELEASED</span>':''}<span class="project-icon" aria-hidden="true">↗</span></span>
-      <span class="project-copy"><span><span class="project-name">${esc(p.title)}</span><span class="project-role">${esc(p.role)}</span></span><span class="project-year">${esc(p.year)}</span></span></button>`).join('');
+    $('project-grid').innerHTML=visible.map(p=>{
+      const v=tr(p);
+      return `<button type="button" class="project-card" data-project="${esc(p.id)}" aria-label="${esc(tt('viewProject',{project:v.title}))}">
+        <span class="project-art${p.cover?'':' is-awaiting-stills'}">${p.cover?`<img src="${stillSrc(p.cover)}" srcset="${stillSrc(p.cover,true)} 800w, ${stillSrc(p.cover)} 1600w" sizes="(max-width: 600px) 100vw, 48vw" alt="${esc(tt('stillFrom',{project:v.title}))}" loading="lazy">`:`<span class="project-no-preview">${esc(tt('stillsToFollow'))}</span>`}<span class="project-type">${esc(v.format)}</span>${p.unreleased?`<span class="project-private">${esc(tt('unreleased'))}</span>`:''}<span class="project-icon" aria-hidden="true">↗</span></span>
+        <span class="project-copy"><span><span class="project-name">${esc(v.title)}</span><span class="project-role">${esc(v.role)}</span></span><span class="project-year">${esc(v.year)}</span></span></button>`;
+    }).join('');
     $('project-grid').querySelectorAll('[data-project]').forEach(b=>b.addEventListener('click',()=>{
       const p=projectById(b.dataset.project);if(p)openProject(p,b);
     }));
@@ -142,12 +157,15 @@
   }));
   function openVideo(p,opener){
     lastFocus=opener;
-    $('video-dialog-format').textContent=p.format;
-    $('video-dialog-title').textContent=p.title;
-    $('video-dialog-role').textContent=p.role;
-    $('video-dialog-description').textContent=p.description;
+    const v=p===c.showreel&&I?.getLang()!=='en'
+      ? {...p,title:tt('showreelTitle'),role:tt('showreelRole'),description:tt('showreelDescription')}
+      : tr(p);
+    $('video-dialog-format').textContent=v.format;
+    $('video-dialog-title').textContent=v.title;
+    $('video-dialog-role').textContent=v.role;
+    $('video-dialog-description').textContent=v.description;
     $('video-direct').href=youtubeUrl(p.videoId);
-    $('video-holder').innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(p.videoId)}?autoplay=1&rel=0" title="${esc(p.title)} — video" loading="eager" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
+    $('video-holder').innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${encodeURIComponent(p.videoId)}?autoplay=1&rel=0" title="${esc(v.title)} — ${esc(tt('watchVideo'))}" loading="eager" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`;
     videoDialog.showModal();document.body.classList.add('dialog-open');$('video-close').focus();
   }
   function closeVideo(){if(videoDialog.open)videoDialog.close();}
@@ -165,31 +183,38 @@
   });
 
   // Accurate frame-aligned ORIGINAL/FINAL pairs; no filters or synthetic grading.
+  let refreshGrading = () => {};
   if (c.gradingPairs?.length) {
     $('comparison-placeholder').hidden = true;
     $('comparison-live').hidden = false;
     const projectSelect=$('grading-project'), frameSelect=$('grading-frame');
     const projects=[...new Map(c.gradingPairs.map(x=>[x.project,x.title])).entries()];
-    projectSelect.innerHTML=projects.map(([id,title])=>`<option value="${esc(id)}">${esc(title)}</option>`).join('');
+    const localGradeTitle=id=>{const p=projectById(id);return p?projectName(p):projects.find(p=>p[0]===id)?.[1]||id;};
     function updateFrame(){
       const p=c.gradingPairs.find(x=>x.id===frameSelect.value);if(!p)return;
       $('comparison-before').src=p.before;
       $('comparison-after').src=p.after;
-      $('comparison-before').alt=`${p.title} — original ungraded frame`;
-      $('comparison-after').alt=`${p.title} — final color grade`;
+      $('comparison-before').alt=tt('gradeBefore',{project:localGradeTitle(p.project)});
+      $('comparison-after').alt=tt('gradeAfter',{project:localGradeTitle(p.project)});
       $('comparison-slider').value=50;
       $('comparison-stage').style.setProperty('--split','50%');
-      $('comparison-explainer').textContent=`${p.title} — ${p.label.toLowerCase()}. Drag the divider to compare the original and final grade.`;
+      $('comparison-explainer').textContent=tt('gradeExplain',{project:localGradeTitle(p.project),frame:tt('frame',{n:p.label.match(/\d+/)?.[0]||'01'})});
     }
     function updateProject(){
       const subset=c.gradingPairs.filter(x=>x.project===projectSelect.value);
-      frameSelect.innerHTML=subset.map(x=>`<option value="${esc(x.id)}">${esc(x.label)}</option>`).join('');
+      frameSelect.innerHTML=subset.map(x=>`<option value="${esc(x.id)}">${esc(tt('frame',{n:x.label.match(/\d+/)?.[0]||'01'}))}</option>`).join('');
       updateFrame();
     }
+    refreshGrading = () => {
+      const selected=projectSelect.value;
+      projectSelect.innerHTML=projects.map(([id])=>`<option value="${esc(id)}">${esc(localGradeTitle(id))}</option>`).join('');
+      if (projects.some(([id])=>id===selected)) projectSelect.value=selected;
+      updateProject();
+    };
     projectSelect.addEventListener('change',updateProject);
     frameSelect.addEventListener('change',updateFrame);
     $('comparison-slider').addEventListener('input',e=>$('comparison-stage').style.setProperty('--split',`${e.target.value}%`));
-    updateProject();
+    refreshGrading();
   }
 
   const email=c.contact.email,phone=c.contact.phoneInternational;
@@ -202,4 +227,15 @@
   $('current-year').textContent=String(new Date().getFullYear());
   $('project-count').textContent=String(c.projects.length).padStart(2,'0');
   $('frame-total').textContent=String(stills.length);
+  I?.onChange(()=>{
+    renderGallery();
+    renderProjects();
+    $('hero-caption').textContent=slideCaption(c.heroSlides[heroIdx]);
+    const frame=c.stills.find(f=>f.file===c.heroSlides[heroIdx].file);
+    if(frame)hero.alt=stillAlt(frame);
+    refreshGrading();
+    trigger.setAttribute('aria-label',tt(trigger.getAttribute('aria-expanded')==='true'?'closeNavigation':'openNavigation'));
+    if(photoDialog.open)showPhoto();
+  });
+  I?.init();
 })();

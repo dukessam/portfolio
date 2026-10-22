@@ -63,3 +63,37 @@
 .project-no-preview{position:absolute;inset:0;display:grid;place-items:center;padding:35px;color:#929694;font-size:clamp(11px,1.1vw,14px);font-weight:500;letter-spacing:.19em;text-align:center}
 .detail-cover.is-awaiting-stills{aspect-ratio:auto;min-height:170px;background:#151718;border:1px solid #36393a;display:grid;place-items:center}
 .detail-no-preview{font-size:13px;color:#929694;letter-spacing:.19em;padding:30px;text-align:center}
+
+/* V8: persistent language switcher and Arabic RTL support */
+.header-row{gap:15px}
+.nav{margin-inline-start:auto}
+.language-switcher{display:flex;align-items:center;gap:3px;margin-inline-start:5px;direction:ltr;flex:0 0 auto;padding:4px;border:1px solid rgba(238,235,226,.35);background:rgba(4,6,9,.36);border-radius:5px}
+.lang-button{border:0;background:transparent;color:#eae7e0;display:inline-flex;align-items:center;justify-content:center;gap:5px;min-height:33px;padding:4px 7px;cursor:pointer;border-radius:3px;transition:background .18s;white-space:nowrap}
+.lang-button:hover,.lang-button:focus-visible{background:rgba(255,255,255,.18)}
+.lang-button.active{background:#ece7de;color:#161819}
+.lang-flag{font-size:17px;line-height:1;letter-spacing:0}
+.lang-code{font-size:9px;line-height:1;font-weight:800;letter-spacing:.06em}
+@media(max-width:1150px){.nav{gap:15px}.language-switcher{gap:1px}.lang-button{padding:4px 5px}}
+@media(max-width:800px){.nav{margin-inline-start:0}.language-switcher{margin-inline-start:auto}.nav-trigger{flex-shrink:0}}
+@media(max-width:560px){.header-row{gap:7px}.language-switcher{gap:0;padding:2px}.lang-button{padding:4px 5px;min-height:30px}.lang-code{display:none}.lang-flag{font-size:19px}}
+@media(max-width:370px){.header .logo-copy{display:none}.lang-button{padding:3px 4px}}
+html[dir="rtl"] body{font-family:"Noto Sans Arabic","DM Sans",sans-serif;letter-spacing:normal}
+html[dir="rtl"] .logo,html[dir="rtl"] .language-switcher,html[dir="rtl"] .footer-brand{direction:ltr}
+html[dir="rtl"] .logo-copy{letter-spacing:normal}
+html[dir="rtl"] .hero h1{direction:ltr;text-align:right}
+html[dir="rtl"] .hero-intro h2{white-space:normal}
+html[dir="rtl"] .statement-copy{letter-spacing:normal;font-weight:650}
+html[dir="rtl"] .statement-copy em,html[dir="rtl"] .section-head h2 em,html[dir="rtl"] .about-title h2 em{font-family:"Noto Sans Arabic",sans-serif;font-style:normal}
+html[dir="rtl"] .statement-aside{text-align:start}
+html[dir="rtl"] .nav,html[dir="rtl"] .hero-top,html[dir="rtl"] .eyeline,html[dir="rtl"] .gallery-tab,html[dir="rtl"] .project-tab,html[dir="rtl"] .frame-number,html[dir="rtl"] .frame-under,html[dir="rtl"] .project-copy,html[dir="rtl"] .project-role,html[dir="rtl"] .section-kicker,html[dir="rtl"] .contact-kicker,html[dir="rtl"] .about-facts span,html[dir="rtl"] .footer-middle,html[dir="rtl"] .footer-links{letter-spacing:normal}
+html[dir="rtl"] .frame-number{left:auto;right:17px}
+html[dir="rtl"] .frame-open{right:auto;left:17px}
+html[dir="rtl"] .project-type{left:auto;right:20px}
+html[dir="rtl"] .project-icon{right:auto;left:22px}
+html[dir="rtl"] .hero-intro,html[dir="rtl"] .hero-overline{direction:rtl}
+html[dir="rtl"] .hero-overline{letter-spacing:normal}
+html[dir="rtl"] .nav .nav-connect span{margin-left:0;margin-right:16px}
+html[dir="rtl"] .color-points span:before{padding-right:0;padding-left:15px}
+html[dir="rtl"] .contact-section h2 em,html[dir="rtl"] .color-info h2 em{font-family:"Noto Sans Arabic",sans-serif;font-style:normal}
+html[dir="rtl"] .eyeline span:last-child{text-align:start}
+html[dir="rtl"] .grading-chooser,html[dir="rtl"] .comparison-instructions{letter-spacing:normal}

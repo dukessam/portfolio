@@ -15,10 +15,11 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=Noto+Sans+Arabic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="preload" as="image" href="assets/stills/0.webp" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
   <script defer src="js/content.js"></script>
+  <script defer src="js/i18n.js"></script>
   <script defer src="js/app.js"></script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Essam Doukhou","jobTitle":"Director & Film Editor","address":{"@type":"PostalAddress","addressCountry":"MA","addressLocality":"Casablanca"},"sameAs":["https://www.instagram.com/thedukgram/"]}</script>
 </head>
@@ -29,6 +30,11 @@
       <a class="logo" href="#top" aria-label="Essam Doukhou, back to top">ED<span class="logo-dot">.</span><span class="logo-copy">ESSAM DOUKHOU <small>DIRECTOR &amp; FILM EDITOR</small></span></a>
       <button type="button" class="nav-trigger" aria-controls="main-nav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span></button>
       <nav class="nav" id="main-nav" aria-label="Site navigation"><a href="#work">WORK</a><a href="#films">FILMS</a><a href="#color">COLOR</a><a href="#about">ABOUT</a><a class="nav-connect" href="#contact">GET IN TOUCH <span aria-hidden="true">↗</span></a></nav>
+      <div class="language-switcher" role="group" aria-label="Choose website language">
+        <button type="button" class="lang-button active" data-language="en" lang="en" aria-pressed="true" aria-label="English" title="English"><span class="lang-flag" aria-hidden="true">🇬🇧</span><span class="lang-code">EN</span></button>
+        <button type="button" class="lang-button" data-language="fr" lang="fr" aria-pressed="false" aria-label="Français" title="Français"><span class="lang-flag" aria-hidden="true">🇫🇷</span><span class="lang-code">FR</span></button>
+        <button type="button" class="lang-button" data-language="ar" lang="ar" aria-pressed="false" aria-label="العربية" title="العربية"><span class="lang-flag" aria-hidden="true">🇲🇦</span><span class="lang-code">AR</span></button>
+      </div>
     </div>
   </header>
   <main>
