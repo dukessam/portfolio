@@ -109,3 +109,16 @@ html[dir="rtl"] .project-meta,html[dir="rtl"] .detail-meta{align-items:flex-star
 html[dir="rtl"] .project-runtime,html[dir="rtl"] .detail-duration{letter-spacing:normal}
 html[dir="rtl"] .logo-name,html[dir="rtl"] .footer-name{letter-spacing:normal;font-family:"Noto Sans Arabic","DM Sans",sans-serif}
 @media(max-width:560px){.project-runtime{font-size:10px}.detail-duration{font-size:11px}}
+
+
+/* Compact active-language flag with a two-language dropdown */
+.language-switcher{position:relative;z-index:35;display:block;flex:0 0 auto;direction:ltr;margin-inline-start:5px;padding:0;border:0;background:none}
+.lang-current,.lang-option{width:43px;height:41px;display:grid;place-items:center;cursor:pointer;color:#ede9e2;border:1px solid rgba(238,235,226,.43);border-radius:5px;background:rgba(4,6,9,.52);padding:0;transition:background .15s,border-color .15s}
+.lang-current span,.lang-option span{font-size:23px;line-height:1;letter-spacing:0}
+.lang-current:hover,.lang-current:focus-visible,.lang-option:hover,.lang-option:focus-visible{background:#26282a;border-color:#e7dfd0;outline-offset:3px}
+.lang-menu{position:absolute;top:calc(100% + 7px);right:0;min-width:51px;display:flex;flex-direction:column;gap:4px;padding:4px;border:1px solid rgba(238,235,226,.45);border-radius:7px;background:#151719;box-shadow:0 12px 30px rgba(0,0,0,.55)}
+.lang-menu[hidden],.lang-option[hidden]{display:none!important}
+.lang-option{background:transparent;border-color:transparent}
+@media(max-width:800px){.language-switcher{margin-inline-start:auto}}
+@media(max-width:560px){.language-switcher{padding:0}.lang-current,.lang-option{width:39px;height:38px}.lang-current span,.lang-option span{font-size:23px}}
+@media(max-width:370px){.lang-current,.lang-option{width:37px;height:36px}}

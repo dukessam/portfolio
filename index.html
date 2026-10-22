@@ -30,10 +30,13 @@
       <a class="logo" href="#top" aria-label="Essam Doukhou, back to top">ED<span class="logo-dot">.</span><span class="logo-copy"><span class="logo-name">ESSAM DOUKHOU</span> <small>DIRECTOR &amp; FILM EDITOR</small></span></a>
       <button type="button" class="nav-trigger" aria-controls="main-nav" aria-expanded="false" aria-label="Open navigation"><span></span><span></span></button>
       <nav class="nav" id="main-nav" aria-label="Site navigation"><a href="#work">WORK</a><a href="#films">FILMS</a><a href="#color">COLOR</a><a href="#about">ABOUT</a><a class="nav-connect" href="#contact">GET IN TOUCH <span aria-hidden="true">↗</span></a></nav>
-      <div class="language-switcher" role="group" aria-label="Choose website language">
-        <button type="button" class="lang-button active" data-language="en" lang="en" aria-pressed="true" aria-label="English" title="English"><span class="lang-flag" aria-hidden="true">🇬🇧</span><span class="lang-code">EN</span></button>
-        <button type="button" class="lang-button" data-language="fr" lang="fr" aria-pressed="false" aria-label="Français" title="Français"><span class="lang-flag" aria-hidden="true">🇫🇷</span><span class="lang-code">FR</span></button>
-        <button type="button" class="lang-button" data-language="ar" lang="ar" aria-pressed="false" aria-label="العربية" title="العربية"><span class="lang-flag" aria-hidden="true">🇲🇦</span><span class="lang-code">AR</span></button>
+      <div class="language-switcher">
+        <button type="button" class="lang-current" id="language-current" aria-label="English — change language" title="Change language" aria-haspopup="true" aria-expanded="false" aria-controls="language-options"><span id="language-current-flag" aria-hidden="true">🇬🇧</span></button>
+        <div class="lang-menu" id="language-options" role="group" aria-label="Other languages" hidden>
+          <button type="button" class="lang-option" data-language="en" lang="en" aria-label="English" title="English" hidden><span aria-hidden="true">🇬🇧</span></button>
+          <button type="button" class="lang-option" data-language="fr" lang="fr" aria-label="Français" title="Français"><span aria-hidden="true">🇫🇷</span></button>
+          <button type="button" class="lang-option" data-language="ar" lang="ar" aria-label="العربية" title="العربية"><span aria-hidden="true">🇲🇦</span></button>
+        </div>
       </div>
     </div>
   </header>

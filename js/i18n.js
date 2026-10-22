@@ -723,12 +723,61 @@ function apply(){
  document.querySelector('meta[name="description"]')?.setAttribute('content',m.description);
  document.querySelector('meta[property="og:title"]')?.setAttribute('content',m.title);
  document.querySelector('meta[property="og:description"]')?.setAttribute('content',m.description);
- document.querySelectorAll('[data-language]').forEach(b=>{const active=b.dataset.language===lang;b.setAttribute('aria-pressed',String(active));b.classList.toggle('active',active);});
- document.querySelector('.language-switcher')?.setAttribute('aria-label',lang==='ar'?'اختر لغة الموقع':lang==='fr'?'Choisir la langue':'Choose website language');
+ refreshLanguageControl();
  for(const fn of listeners)fn(lang);
 }
-function setLang(next){if(!['en','fr','ar'].includes(next)||next===lang)return;lang=next;try{localStorage.setItem('portfolio-lang',lang);}catch(e){}apply();}
+const languageNames={en:'English',fr:'Français',ar:'العربية'};
+const languageFlags={en:'🇬🇧',fr:'🇫🇷',ar:'🇲🇦'};
+let languageMenuOpen=false;
+function closeLanguageMenu(focus=false){
+ const menu=document.getElementById('language-options'),trigger=document.getElementById('language-current');
+ if(!menu||!trigger)return;
+ menu.hidden=true;trigger.setAttribute('aria-expanded','false');languageMenuOpen=false;
+ if(focus)trigger.focus();
+}
+function openLanguageMenu(){
+ const menu=document.getElementById('language-options'),trigger=document.getElementById('language-current');
+ if(!menu||!trigger)return;
+ menu.hidden=false;trigger.setAttribute('aria-expanded','true');languageMenuOpen=true;
+}
+function refreshLanguageControl(){
+ const trigger=document.getElementById('language-current');
+ const flag=document.getElementById('language-current-flag');
+ const menu=document.getElementById('language-options');
+ if(!trigger||!flag||!menu)return;
+ flag.textContent=languageFlags[lang];
+ const label=lang==='fr'?'Changer de langue':lang==='ar'?'تغيير اللغة':'Change language';
+ trigger.setAttribute('aria-label',languageNames[lang]+' — '+label);
+ trigger.title=label;
+ menu.setAttribute('aria-label',lang==='fr'?'Autres langues':lang==='ar'?'لغات أخرى':'Other languages');
+ document.querySelectorAll('.lang-option[data-language]').forEach(b=>{
+  b.hidden=b.dataset.language===lang;
+  b.setAttribute('aria-pressed',String(b.dataset.language===lang));
+ });
+}
+function setLang(next){
+ if(!['en','fr','ar'].includes(next)||next===lang){closeLanguageMenu();return;}
+ lang=next;try{localStorage.setItem('portfolio-lang',lang);}catch(e){}
+ closeLanguageMenu();apply();
+}
 function onChange(fn){listeners.push(fn);}
-function init(){document.querySelectorAll('[data-language]').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.language)));apply();}
+function init(){
+ const trigger=document.getElementById('language-current');
+ const menu=document.getElementById('language-options');
+ if(trigger&&menu){
+  trigger.addEventListener('click',()=>languageMenuOpen?closeLanguageMenu():openLanguageMenu());
+  trigger.addEventListener('keydown',e=>{
+   if(e.key==='ArrowDown'){e.preventDefault();openLanguageMenu();menu.querySelector('.lang-option:not([hidden])')?.focus();}
+   if(e.key==='Escape'&&languageMenuOpen){e.preventDefault();closeLanguageMenu();}
+  });
+  menu.querySelectorAll('[data-language]').forEach(b=>b.addEventListener('click',()=>{setLang(b.dataset.language);trigger.focus();}));
+  menu.addEventListener('keydown',e=>{
+   if(e.key==='Escape'){e.preventDefault();closeLanguageMenu(true);}
+  });
+  document.addEventListener('pointerdown',e=>{if(languageMenuOpen&&!trigger.parentElement.contains(e.target))closeLanguageMenu();});
+  document.addEventListener('focusin',e=>{if(languageMenuOpen&&!trigger.parentElement.contains(e.target))closeLanguageMenu();});
+ }
+ apply();
+}
 window.PORTFOLIO_I18N={text,project,getLang:()=>lang,onChange,init};
 })();
