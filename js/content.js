@@ -19,19 +19,19 @@ window.PORTFOLIO_CONTENT = {
       "alt": "Silhouetted performers in a lifting pose against a twilight sky"
     },
     {
+      "file": "fih-bouya-03",
+      "caption": "FIH BOUYA / AICHA MADO / 2026",
+      "alt": "A smiling singer lifting a pink textile against a clear blue sky"
+    },
+    {
       "file": "22",
       "caption": "WELD SAHRA / 2023",
       "alt": "A singer in a pink suit standing in the desert"
     },
     {
-      "file": "25",
-      "caption": "WELD SAHRA / 2023",
-      "alt": "Horsemen riding in a fantasia through smoke"
-    },
-    {
-      "file": "6",
-      "caption": "SACRED UNION / 2022",
-      "alt": "A lone performer framed by fire and smoke"
+      "file": "37",
+      "caption": "POETRY AND MUSIC OF THE SAHARA / 2020",
+      "alt": "A musician silhouetted in golden desert light"
     },
     {
       "file": "39",
@@ -39,29 +39,24 @@ window.PORTFOLIO_CONTENT = {
       "alt": "Bare feet sinking into sunlit sand"
     },
     {
-      "file": "49",
-      "caption": "ANTI-DREAM PILLS / 2017",
-      "alt": "Tight close-up of a person’s eyes in low-key light"
-    },
-    {
-      "file": "dual-horizon-new-03",
-      "caption": "DUAL HORIZON / 2024",
-      "alt": "A ritual-like outdoor installation with branches and painted objects"
-    },
-    {
       "file": "station-36",
       "caption": "STATION 36 / 2021",
       "alt": "A group gathering inside a decorated cafe"
     },
     {
-      "file": "fih-bouya-03",
-      "caption": "FIH BOUYA / AICHA MADO / 2026",
-      "alt": "A smiling singer lifting a pink textile against a clear blue sky"
+      "file": "49",
+      "caption": "ANTI-DREAM PILLS / 2017",
+      "alt": "Tight close-up of a person’s eyes in low-key light"
     },
     {
-      "file": "farachatoune-01",
+      "file": "farachatoune-09",
       "caption": "FARACHATOUNE / BOOYA / 2026",
-      "alt": "A blue butterfly resting on the curve of a white fabric installation at twilight"
+      "alt": "A performative hand gesture with long sleeves against the horizon"
+    },
+    {
+      "file": "6",
+      "caption": "SACRED UNION / 2022",
+      "alt": "A lone performer framed by fire and smoke"
     }
   ],
   "stills": [
@@ -523,24 +518,24 @@ window.PORTFOLIO_CONTENT = {
     }
   ],
   "featuredOrder": [
-    "1",
     "sacred-union-new-03",
     "sacred-union-new-05",
     "31",
     "34",
     "star-new-01",
     "48",
-    "dual-horizon-new-05",
     "station-36-new-05",
-    "fih-bouya-07",
+    "dual-horizon-new-05",
+    "25",
     "farachatoune-01",
+    "1",
+    "fih-bouya-07",
     "fih-bouya-03",
     "farachatoune-11",
     "station-36-new-02",
     "dual-horizon-new-04",
     "anti-dream-new-01",
     "41",
-    "25",
     "35",
     "27",
     "0",
