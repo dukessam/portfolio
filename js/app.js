@@ -41,7 +41,7 @@
   const photoDialog = $('photo-dialog');
   function renderGallery(){
     const filtered=stills.filter(f=>galleryFilter==='all'||f.project===galleryFilter);
-    const visible=galleryExpanded?filtered:filtered.slice(0,9);
+    const visible=galleryExpanded?filtered:filtered.slice(0,11);
     currentGallery=filtered;
     $('frames-grid').innerHTML=visible.map((f,i)=>{
       const p=projectById(f.project);
@@ -51,7 +51,7 @@
     }).join('');
     $('frames-grid').querySelectorAll('[data-frame-index]').forEach(b=>b.addEventListener('click',()=>openPhoto(Number(b.dataset.frameIndex),b)));
     const expand=$('expand-gallery');
-    expand.hidden=filtered.length<=9;
+    expand.hidden=filtered.length<=11;
     expand.innerHTML=galleryExpanded?'SHOW FEWER FRAMES <span aria-hidden="true">↑</span>':`VIEW ALL ${filtered.length} FRAMES <span aria-hidden="true">↗</span>`;
   }
   document.querySelectorAll('[data-frame-filter]').forEach(b=>b.addEventListener('click',()=>{

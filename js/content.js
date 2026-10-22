@@ -24,14 +24,19 @@ window.PORTFOLIO_CONTENT = {
       "alt": "A singer in a pink suit standing in the desert"
     },
     {
-      "file": "36",
-      "caption": "POETRY AND MUSIC OF THE SAHARA / 2020",
-      "alt": "A figure draped in blue fabric among desert trees"
+      "file": "25",
+      "caption": "WELD SAHRA / 2023",
+      "alt": "Horsemen riding in a fantasia through smoke"
     },
     {
-      "file": "46",
-      "caption": "THE STAR / AL NAJM / 2019",
-      "alt": "A soft-focus cinematic group shot from the television film"
+      "file": "6",
+      "caption": "SACRED UNION / 2022",
+      "alt": "A lone performer framed by fire and smoke"
+    },
+    {
+      "file": "39",
+      "caption": "POETRY AND MUSIC OF THE SAHARA / 2020",
+      "alt": "Bare feet sinking into sunlit sand"
     },
     {
       "file": "49",
@@ -39,14 +44,9 @@ window.PORTFOLIO_CONTENT = {
       "alt": "Tight close-up of a person’s eyes in low-key light"
     },
     {
-      "file": "25",
-      "caption": "WELD SAHRA / 2023",
-      "alt": "Horsemen riding in a fantasia through smoke"
-    },
-    {
-      "file": "dual-horizon-new-05",
+      "file": "dual-horizon-new-03",
       "caption": "DUAL HORIZON / 2024",
-      "alt": "A white masked figure holding a laptop in an open landscape"
+      "alt": "A ritual-like outdoor installation with branches and painted objects"
     },
     {
       "file": "station-36",
@@ -523,19 +523,26 @@ window.PORTFOLIO_CONTENT = {
     }
   ],
   "featuredOrder": [
+    "1",
+    "sacred-union-new-03",
+    "sacred-union-new-05",
+    "31",
+    "34",
+    "star-new-01",
+    "48",
+    "dual-horizon-new-05",
+    "station-36-new-05",
+    "fih-bouya-07",
+    "farachatoune-01",
     "fih-bouya-03",
     "farachatoune-11",
     "station-36-new-02",
     "dual-horizon-new-04",
-    "star-new-01",
     "anti-dream-new-01",
     "41",
     "25",
-    "farachatoune-01",
-    "1",
     "35",
     "27",
-    "48",
     "0",
     "36",
     "49",
@@ -547,7 +554,6 @@ window.PORTFOLIO_CONTENT = {
     "station-36",
     "33",
     "50",
-    "34",
     "2",
     "43",
     "20",
@@ -560,7 +566,6 @@ window.PORTFOLIO_CONTENT = {
     "12",
     "21",
     "29",
-    "31",
     "37",
     "28",
     "32",
@@ -570,7 +575,6 @@ window.PORTFOLIO_CONTENT = {
     "fih-bouya-04",
     "fih-bouya-05",
     "fih-bouya-06",
-    "fih-bouya-07",
     "farachatoune-02",
     "farachatoune-03",
     "farachatoune-04",
@@ -584,7 +588,6 @@ window.PORTFOLIO_CONTENT = {
     "station-36-new-01",
     "station-36-new-03",
     "station-36-new-04",
-    "station-36-new-05",
     "station-36-new-06",
     "station-36-new-08",
     "station-36-new-09",
@@ -592,13 +595,10 @@ window.PORTFOLIO_CONTENT = {
     "dual-horizon-new-01",
     "dual-horizon-new-02",
     "dual-horizon-new-03",
-    "dual-horizon-new-05",
     "dual-horizon-new-06",
     "star-new-02",
     "sacred-union-new-01",
-    "sacred-union-new-03",
-    "sacred-union-new-04",
-    "sacred-union-new-05"
+    "sacred-union-new-04"
   ],
   "projects": [
     {
