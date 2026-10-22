@@ -8,60 +8,60 @@ window.PORTFOLIO_CONTENT = {
   "showreel": {
     "title": "Selected showreel",
     "format": "SHOWREEL",
-    "role": "Editing / Color grading / Filmmaking",
+    "role": "Direction / Film editing / Color grading",
     "videoId": "pm0K-JURLZo",
     "description": "A selection of moving-image work by Essam Doukhou."
   },
   "heroSlides": [
     {
-      "file": "fih-bouya-03",
-      "caption": "FIH BOUYA / AICHA MADO / 2026",
-      "alt": "A smiling singer lifting vibrant pink fabric"
-    },
-    {
-      "file": "3",
+      "file": "0",
       "caption": "SACRED UNION / 2022",
-      "alt": "A silhouetted figure surrounded by candles at dusk"
+      "alt": "Silhouetted performers in a lifting pose against a twilight sky"
     },
     {
-      "file": "farachatoune-11",
-      "caption": "FARACHATOUNE / BOOYA / 2026",
-      "alt": "Aerial view of an outdoor performance installation"
+      "file": "22",
+      "caption": "WELD SAHRA / 2023",
+      "alt": "A singer in a pink suit standing in the desert"
     },
     {
-      "file": "41",
+      "file": "36",
       "caption": "POETRY AND MUSIC OF THE SAHARA / 2020",
-      "alt": "Saharan musicians seated on a sunlit dune"
+      "alt": "A figure draped in blue fabric among desert trees"
+    },
+    {
+      "file": "46",
+      "caption": "THE STAR / AL NAJM / 2019",
+      "alt": "A soft-focus cinematic group shot from the television film"
+    },
+    {
+      "file": "49",
+      "caption": "ANTI-DREAM PILLS / 2017",
+      "alt": "Tight close-up of a person’s eyes in low-key light"
     },
     {
       "file": "25",
       "caption": "WELD SAHRA / 2023",
-      "alt": "Horsemen charging through clouds of smoke"
+      "alt": "Horsemen riding in a fantasia through smoke"
     },
     {
-      "file": "dual-horizon-new-04",
+      "file": "dual-horizon-new-05",
       "caption": "DUAL HORIZON / 2024",
-      "alt": "A white masked figure in an open landscape"
+      "alt": "A white masked figure holding a laptop in an open landscape"
     },
     {
-      "file": "station-36-new-02",
+      "file": "station-36",
       "caption": "STATION 36 / 2021",
-      "alt": "A wide, brightly decorated bakery interior"
+      "alt": "A group gathering inside a decorated cafe"
     },
     {
-      "file": "star-new-01",
-      "caption": "THE STAR / AL NAJM / 2019",
-      "alt": "A family gathered together in a Moroccan living room"
-    },
-    {
-      "file": "anti-dream-new-01",
-      "caption": "ANTI-DREAM PILLS / 2017",
-      "alt": "A young man appearing in a rough-walled courtyard"
+      "file": "fih-bouya-03",
+      "caption": "FIH BOUYA / AICHA MADO / 2026",
+      "alt": "A smiling singer lifting a pink textile against a clear blue sky"
     },
     {
       "file": "farachatoune-01",
       "caption": "FARACHATOUNE / BOOYA / 2026",
-      "alt": "Blue butterfly in an open landscape at twilight"
+      "alt": "A blue butterfly resting on the curve of a white fabric installation at twilight"
     }
   ],
   "stills": [
@@ -426,12 +426,6 @@ window.PORTFOLIO_CONTENT = {
       "number": 7
     },
     {
-      "file": "station-36-new-07",
-      "project": "station-36",
-      "alt": "Two men talking beneath the hanging wicker lamps",
-      "number": 8
-    },
-    {
       "file": "station-36-new-08",
       "project": "station-36",
       "alt": "Two women smiling from behind the bakery counter",
@@ -510,12 +504,6 @@ window.PORTFOLIO_CONTENT = {
       "number": 11
     },
     {
-      "file": "sacred-union-new-02",
-      "project": "sacred-union",
-      "alt": "A dancer standing with open arms under evening light",
-      "number": 12
-    },
-    {
       "file": "sacred-union-new-03",
       "project": "sacred-union",
       "alt": "Two dancers standing close together with painted marks",
@@ -540,7 +528,6 @@ window.PORTFOLIO_CONTENT = {
     "station-36-new-02",
     "dual-horizon-new-04",
     "star-new-01",
-    "sacred-union-new-02",
     "anti-dream-new-01",
     "41",
     "25",
@@ -599,7 +586,6 @@ window.PORTFOLIO_CONTENT = {
     "station-36-new-04",
     "station-36-new-05",
     "station-36-new-06",
-    "station-36-new-07",
     "station-36-new-08",
     "station-36-new-09",
     "station-36-new-10",
@@ -626,7 +612,7 @@ window.PORTFOLIO_CONTENT = {
         "color"
       ],
       "videoId": "6N7FtCLsBjw",
-      "cover": "sacred-union-new-05",
+      "cover": "1",
       "description": "An art video made with Canadian performance artist Annie Gagnon. I edited and color graded the performance."
     },
     {
@@ -654,7 +640,7 @@ window.PORTFOLIO_CONTENT = {
         "color"
       ],
       "videoId": "6IA6a0pm_i8",
-      "cover": "fih-bouya-03",
+      "cover": "fih-bouya-07",
       "description": "Music video by Aicha Mado. I worked on the color grading.",
       "credits": [
         [
@@ -718,7 +704,7 @@ window.PORTFOLIO_CONTENT = {
         "color"
       ],
       "videoId": "G7FEr_U2byQ",
-      "cover": "34",
+      "cover": "36",
       "description": "A feature documentary about Saharan poetry, music and the people who keep these traditions alive. I worked on the editing and color grading."
     },
     {
@@ -731,7 +717,7 @@ window.PORTFOLIO_CONTENT = {
         "direction"
       ],
       "videoId": "kBuHJx_N-sA",
-      "cover": "star-new-01",
+      "cover": "46",
       "description": "A television film made for Al Aoula with Casablanca Pictures. I co-wrote and directed it.",
       "videoLabel": "WATCH TRAILER"
     },
@@ -745,7 +731,7 @@ window.PORTFOLIO_CONTENT = {
         "direction"
       ],
       "videoId": "B9bU5wojE5s",
-      "cover": "anti-dream-new-01",
+      "cover": "48",
       "description": "A short fiction film I wrote and directed, supported by the FIFM Foundation."
     },
     {
@@ -794,7 +780,7 @@ window.PORTFOLIO_CONTENT = {
         "editing"
       ],
       "videoId": "Ddyyo11uMrI",
-      "cover": "station-36-new-02",
+      "cover": "station-36-new-01",
       "description": "A short sitcom made with Perfect Productions. I wrote, directed and edited it."
     }
   ],
@@ -999,14 +985,6 @@ window.PORTFOLIO_CONTENT = {
       "before": "assets/grading/update-13-dual-horizon-new-05-before.webp",
       "after": "assets/grading/update-13-dual-horizon-new-05-after.webp",
       "label": "FRAME 13"
-    },
-    {
-      "id": "update-14-station-36-new-07",
-      "project": "station-36",
-      "title": "Station 36",
-      "before": "assets/grading/update-14-station-36-new-07-before.webp",
-      "after": "assets/grading/update-14-station-36-new-07-after.webp",
-      "label": "FRAME 14"
     }
   ]
 };
