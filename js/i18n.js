@@ -35,7 +35,7 @@ const staticCopy={
     "مخرج ومونتير"
   ],
   ".hero-top .live-status": [
-    "<span class='status-dot'></span> DISPONIBLE POUR DES PROJETS",
+    "<span class='status-dot'></span> DISPONIBLE POUR DE NOUVEAUX PROJETS",
     "<span class='status-dot'></span> متاح للمشاريع المستقلة"
   ],
   ".hero-overline": [
@@ -47,7 +47,7 @@ const staticCopy={
     "مخرج <span>و</span> مونتير"
   ],
   ".hero-intro p": [
-    "Je réalise et monte des films, des documentaires et des clips. Je travaille aussi comme étalonneur indépendant.",
+    "Je réalise et monte des films, des documentaires et des clips musicaux. J’interviens également comme étalonneur indépendant.",
     "أُخرج وأُمنتج الأفلام والوثائقيات والفيديوهات الموسيقية، وأعمل أيضاً بشكل مستقل في تصحيح الألوان."
   ],
   ".hero-ctas .cta-main": [
@@ -59,7 +59,7 @@ const staticCopy={
     "<span class='tiny-play' aria-hidden='true'>▶</span> شاهد شريط أعمالي"
   ],
   ".scroll-hint": [
-    "DÉFILER POUR DÉCOUVRIR <span aria-hidden='true'>↓</span>",
+    "DÉCOUVRIR LA SUITE <span aria-hidden='true'>↓</span>",
     "مرّر لاكتشاف الأعمال <span aria-hidden='true'>↓</span>"
   ],
   ".statement-index": [
@@ -75,7 +75,7 @@ const staticCopy={
     "إخراج <span>/</span> مونتاج<br>روائي <span>/</span> وثائقي <span>/</span> فيديو كليب<br>فنون بصرية <span>/</span> تلفزيون"
   ],
   ".frames-section .eyeline span:first-child": [
-    "01 / SÉLECTION VISUELLE",
+    "01 / SÉLECTION DE PLANS",
     "01 / مختارات بصرية"
   ],
   ".frames-section .eyeline span:last-child": [
@@ -83,15 +83,15 @@ const staticCopy={
     "76 لقطة / 09 مشاريع"
   ],
   ".frames-section .section-kicker": [
-    "EXTRAITS DE MES PROJETS",
+    "IMAGES ISSUES DE MES PROJETS",
     "من أعمالي"
   ],
   "#frames-title": [
-    "Images <em>choisies.</em>",
+    "Plans <em>choisis.</em>",
     "لقطات <em>مختارة.</em>"
   ],
   ".frames-section .section-text": [
-    "Une sélection de plans tirés de mes projets. Choisissez un film pour parcourir ses images.",
+    "Une sélection de plans issus des projets auxquels j’ai participé. Explorez les images par film.",
     "لقطات مختارة من مشاريعي. اختر عملاً لتصفح مشاهده."
   ],
   ".gallery-tab[data-frame-filter='all']": [
@@ -119,12 +119,12 @@ const staticCopy={
     "الشعر والموسيقى"
   ],
   ".gallery-tab[data-frame-filter='the-star']": [
-    "L’ÉTOILE",
+    "LA VEDETTE",
     "النجم"
   ],
   ".gallery-tab[data-frame-filter='anti-dream']": [
     "ANTI-DREAM PILLS",
-    "حبوب ضد الأحلام"
+    "حبوب منع الحلم"
   ],
   ".gallery-tab[data-frame-filter='dual-horizon']": [
     "DUAL HORIZON",
@@ -135,7 +135,7 @@ const staticCopy={
     "المحطة 36"
   ],
   ".gallery-end p": [
-    "Les images sont classées par projet. Choisissez un film pour parcourir ses plans.",
+    "Les plans sont regroupés par projet. Sélectionnez un titre pour découvrir les images.",
     "جميع اللقطات مرتبة حسب المشروع. اختر عملاً لاستعراض مشاهده."
   ],
   ".film-section .eyeline span:first-child": [
@@ -143,11 +143,11 @@ const staticCopy={
     "02 / أعمال مصوّرة"
   ],
   ".film-section .eyeline span:last-child": [
-    "FILMOGRAPHIE SÉLECTIVE",
+    "FILMOGRAPHIE CHOISIE",
     "أعمال سينمائية مختارة"
   ],
   ".film-section .section-kicker": [
-    "LES PROJETS À L’ÉCRAN",
+    "FILMS ET RÉALISATIONS",
     "الأعمال المصوّرة"
   ],
   "#films-title": [
@@ -155,7 +155,7 @@ const staticCopy={
     "أفلام <em>ومشاريع.</em>"
   ],
   ".film-section .section-text": [
-    "Réalisations, montages et étalonnages. Ouvrez un projet pour voir les images et les crédits.",
+    "Réalisation, montage et étalonnage : sélectionnez un projet pour en découvrir les images et les crédits.",
     "أعمال في الإخراج والمونتاج وتصحيح الألوان. افتح أي مشروع للاطلاع على صوره وتفاصيله."
   ],
   ".project-tab[data-project-filter='all']": [
@@ -179,7 +179,7 @@ const staticCopy={
     "03 / تصحيح الألوان"
   ],
   ".color-section .eyeline span:last-child": [
-    "ORIGINAL / VERSION ÉTALONNÉE",
+    "IMAGE D’ORIGINE / VERSION ÉTALONNÉE",
     "الأصل / النسخة المصحّحة"
   ],
   ".color-section .section-kicker": [
@@ -191,15 +191,15 @@ const staticCopy={
     "تصحيح<br><em>الألوان.</em>"
   ],
   ".color-description": [
-    "Je travaille également comme étalonneur indépendant : équilibre des plans, contraste et couleurs au service de chaque film.",
+    "Également étalonneur indépendant, j’accompagne chaque projet dans la construction de son identité visuelle : équilibre des plans, contraste et palette chromatique.",
     "أعمل أيضاً بشكل مستقل في تصحيح الألوان، من موازنة اللقطات إلى بناء التباين والهوية اللونية التي تناسب كل فيلم."
   ],
   ".color-points": [
-    "<span>CONTRASTE & TONALITÉS</span><span>PALETTE & AMBIANCE</span><span>HARMONISATION DES PLANS</span>",
+    "<span>CONTRASTE & LUMINANCE</span><span>PALETTE & ATMOSPHÈRE</span><span>RACCORDS COLORIMÉTRIQUES</span>",
     "<span>التباين والدرجات</span><span>الألوان والمزاج</span><span>توحيد ألوان اللقطات</span>"
   ],
   ".comparison-overline": [
-    "COMPARAISON / IMAGES RÉELLES",
+    "AVANT / APRÈS ÉTALONNAGE",
     "مقارنة الألوان / لقطات أصلية"
   ],
   ".comparison-label h3": [
@@ -207,7 +207,7 @@ const staticCopy={
     "قبل <em>و</em> بعد"
   ],
   "#comparison-explainer": [
-    "Comparez les images avant et après étalonnage. Déplacez le curseur pour voir la différence.",
+    "Comparez l’image d’origine à sa version étalonnée. Déplacez la ligne de séparation pour apprécier le travail effectué.",
     "قارن اللقطة الأصلية مع النسخة المصحّحة. حرّك الفاصل لرؤية الفرق."
   ],
   ".comparison-placeholder > span": [
@@ -247,11 +247,11 @@ const staticCopy={
     "04 / نبذة عني"
   ],
   ".about-section .eyeline span:last-child": [
-    "DERRIÈRE LES IMAGES",
+    "PARCOURS ET DÉMARCHE",
     "خلف الصورة"
   ],
   ".about-section .section-kicker": [
-    "QUELQUES MOTS SUR MOI",
+    "À PROPOS DE MOI",
     "من أنا"
   ],
   "#about-title": [
@@ -259,15 +259,15 @@ const staticCopy={
     "مخرج.<br>مونتير.<br><em>ملوّن سينمائي.</em>"
   ],
   ".about-lead": [
-    "Je suis un réalisateur et monteur marocain.",
+    "Je suis réalisateur et monteur, basé à Casablanca.",
     "أنا مخرج ومونتير مغربي."
   ],
   ".about-body > p:not(.about-lead):nth-of-type(2)": [
-    "Je travaille sur des fictions, documentaires, productions télévisées, clips et projets d’art vidéo. J’assure aussi l’étalonnage de mes projets et de ceux d’autres réalisateurs.",
+    "Je travaille sur des films de fiction, des documentaires, des productions télévisées, des clips musicaux et des installations vidéo. J’assure également l’étalonnage, sur mes propres projets comme pour d’autres réalisateurs.",
     "أعمل على الأفلام الروائية والوثائقية والمسلسلات التلفزيونية والفيديوهات الموسيقية والمشاريع الفنية. وأتولى أيضاً تصحيح الألوان في أعمالي ولدى مخرجين آخرين."
   ],
   ".about-body > p:not(.about-lead):nth-of-type(3)": [
-    "J’ai également travaillé comme réalisateur de seconde équipe sur des séries marocaines, notamment <em>KM7</em> (2025) et <em>Rahma</em>, saison 2 (2026).",
+    "J’ai aussi assuré la réalisation de la seconde équipe sur des séries marocaines, notamment <em>KM7</em> (2025) et la saison 2 de <em>Rahma</em> (2026).",
     "عملت أيضاً مخرجاً للوحدة الثانية في مسلسلات مغربية، من بينها <em>KM7</em> (2025) والموسم الثاني من <em>رحمة</em> (2026)."
   ],
   ".about-facts > div:nth-child(1) span": [
@@ -315,7 +315,7 @@ const staticCopy={
     "لنعمل<br><em>معاً.</em>"
   ],
   ".contact-blurb": [
-    "Disponible pour des projets de réalisation et de montage ainsi que pour l’étalonnage en freelance, au Maroc ou à distance lorsque c’est possible.",
+    "Disponible pour la réalisation, le montage et des missions d’étalonnage en freelance, au Maroc ou à distance selon les projets.",
     "متاح لمشاريع الإخراج والمونتاج، وكذلك لتصحيح الألوان بشكل مستقل، في المغرب أو عن بُعد بحسب طبيعة المشروع."
   ],
   "#email-button": [
@@ -327,7 +327,7 @@ const staticCopy={
     "واتساب <span aria-hidden='true'>↗</span>"
   ],
   ".footer-middle": [
-    "RÉALISATEUR & MONTEUR<br>MAROC / INTERNATIONAL",
+    "RÉALISATEUR & MONTEUR<br>MAROC / À L’INTERNATIONAL",
     "مخرج ومونتير<br>المغرب / العالم"
   ],
   ".footer-links a[href*='instagram']": [
@@ -365,6 +365,18 @@ const staticCopy={
   "#video-direct": [
     "VOIR SUR YOUTUBE ↗",
     "شاهد على يوتيوب ↗"
+  ],
+  ".logo-name": [
+    "ESSAM DOUKHOU",
+    "عصام دوخو"
+  ],
+  ".footer-name": [
+    "ESSAM DOUKHOU",
+    "عصام دوخو"
+  ],
+  "#hero-title": [
+    "Essam<br><span>Doukhou</span><em>.</em>",
+    "عصام<br><span>دوخو</span><em>.</em>"
   ]
 };
 const projects={
@@ -373,19 +385,19 @@ const projects={
       "title": "Sacred Union",
       "format": "VIDÉO D’ART / PERFORMANCE",
       "role": "Montage et étalonnage",
-      "description": "Vidéo d’art réalisée avec l’artiste canadienne Annie Gagnon. J’en ai assuré le montage et l’étalonnage."
+      "description": "Vidéo d’art issue d’une collaboration avec l’artiste performeuse canadienne Annie Gagnon. J’en ai assuré le montage et l’étalonnage."
     },
     "weld-sahra": {
       "title": "Weld Sahra",
       "format": "CLIP MUSICAL",
       "role": "Réalisation, montage et étalonnage",
-      "description": "Clip de Mohamed Atef tourné dans le Sahara. Je l’ai réalisé, monté et étalonné."
+      "description": "Clip de Mohamed Atef tourné dans le Sahara. J’en ai assuré la réalisation, le montage et l’étalonnage."
     },
     "recent-music-video": {
       "title": "Fih Bouya — Aicha Mado",
       "format": "CLIP MUSICAL",
       "role": "Étalonnage",
-      "description": "Clip d’Aicha Mado. J’en ai réalisé l’étalonnage.",
+      "description": "Clip d’Aicha Mado, pour lequel j’ai assuré l’étalonnage.",
       "credits": [
         [
           "Artiste",
@@ -405,7 +417,7 @@ const projects={
       "title": "Farachatoune — BOOYA",
       "format": "CLIP MUSICAL / INÉDIT",
       "role": "Réalisation, montage et étalonnage",
-      "description": "Clip inédit de BOOYA. J’en ai assuré la réalisation, le montage et l’étalonnage.",
+      "description": "Clip de BOOYA, encore inédit. J’en ai assuré la réalisation, le montage et l’étalonnage.",
       "credits": [
         [
           "Artiste",
@@ -428,26 +440,40 @@ const projects={
     "poetry-sahara": {
       "title": "Poésie et musique du Sahara",
       "format": "LONG MÉTRAGE DOCUMENTAIRE / DOCU-FICTION",
-      "role": "Montage et étalonnage",
-      "description": "Un documentaire sur la poésie et la musique sahariennes, ainsi que sur celles et ceux qui en perpétuent les traditions. J’ai travaillé au montage et à l’étalonnage."
+      "role": "Réalisation, montage et étalonnage",
+      "description": "Long métrage documentaire consacré à la poésie et à la musique sahariennes, ainsi qu’aux personnes qui en perpétuent les traditions. J’en ai assuré la réalisation, le montage et l’étalonnage.",
+      "credits": [
+        [
+          "Réalisation",
+          "Essam Doukhou"
+        ],
+        [
+          "Montage",
+          "Essam Doukhou"
+        ],
+        [
+          "Étalonnage",
+          "Essam Doukhou"
+        ]
+      ]
     },
     "the-star": {
-      "title": "L’Étoile / Al Najm",
+      "title": "La Vedette",
       "format": "TÉLÉFILM",
       "role": "Réalisation et coécriture",
-      "description": "Un téléfilm produit pour Al Aoula avec Casablanca Pictures. Je l’ai corécrit et réalisé."
+      "description": "Téléfilm produit par Casablanca Pictures pour Al Aoula. J’en ai assuré la réalisation et coécrit le scénario."
     },
     "anti-dream": {
       "title": "Anti-Dream Pills",
       "format": "COURT MÉTRAGE DE FICTION",
       "role": "Écriture et réalisation",
-      "description": "Un court métrage de fiction que j’ai écrit et réalisé avec le soutien de la Fondation FIFM."
+      "description": "Court métrage de fiction que j’ai écrit et réalisé, avec le soutien de la Fondation du Festival international du film de Marrakech."
     },
     "dual-horizon": {
       "title": "Dual Horizon",
       "format": "INSTALLATION VIDÉO",
       "role": "Artiste visuel et étalonnage",
-      "description": "Une œuvre vidéo et une installation de 2024, créées avec le sculpteur Rachid Boumalki et le peintre Amine Aaliwica. J’ai conçu l’œuvre vidéo et réalisé son étalonnage.",
+      "description": "Installation et œuvre vidéo réalisées en 2024 avec le sculpteur Rachid Boumalki et le peintre Amine Aaliwica. J’ai conçu et réalisé la vidéo, puis assuré son étalonnage.",
       "credits": [
         [
           "Artiste visuel et étalonnage",
@@ -473,9 +499,9 @@ const projects={
     },
     "station-36": {
       "title": "Station 36",
-      "format": "SITCOM COURTE",
+      "format": "SITCOM / FORMAT COURT",
       "role": "Écriture, réalisation et montage",
-      "description": "Une courte sitcom produite avec Perfect Productions. Je l’ai écrite, réalisée et montée."
+      "description": "Une courte sitcom produite avec Perfect Productions. J’en ai assuré l’écriture, la réalisation et le montage."
     }
   },
   "ar": {
@@ -507,7 +533,7 @@ const projects={
         ],
         [
           "تصحيح الألوان",
-          "عصام دخو"
+          "عصام دوخو"
         ]
       ]
     },
@@ -527,7 +553,7 @@ const projects={
         ],
         [
           "الإخراج والمونتاج وتصحيح الألوان",
-          "عصام دخو"
+          "عصام دوخو"
         ],
         [
           "الحالة",
@@ -538,8 +564,22 @@ const projects={
     "poetry-sahara": {
       "title": "شعر وموسيقى الصحراء",
       "format": "فيلم وثائقي طويل / وثائقي تخييلي",
-      "role": "مونتاج وتصحيح الألوان",
-      "description": "فيلم وثائقي عن شعر الصحراء وموسيقاها والأشخاص الذين يحافظون على هذه التقاليد. شاركت في المونتاج وتصحيح الألوان."
+      "role": "إخراج ومونتاج وتصحيح الألوان",
+      "description": "فيلم وثائقي طويل عن الشعر والموسيقى في الصحراء والأشخاص الذين يحافظون على هذه التقاليد. توليت إخراجه ومونتاجه وتصحيح ألوانه.",
+      "credits": [
+        [
+          "الإخراج",
+          "عصام دوخو"
+        ],
+        [
+          "المونتاج",
+          "عصام دوخو"
+        ],
+        [
+          "تصحيح الألوان",
+          "عصام دوخو"
+        ]
+      ]
     },
     "the-star": {
       "title": "النجم",
@@ -548,7 +588,7 @@ const projects={
       "description": "فيلم تلفزيوني للقناة الأولى، بالتعاون مع Casablanca Pictures. شاركت في كتابته وأخرجته."
     },
     "anti-dream": {
-      "title": "حبوب ضد الأحلام",
+      "title": "حبوب منع الحلم",
       "format": "فيلم روائي قصير",
       "role": "كتابة وإخراج",
       "description": "فيلم روائي قصير كتبته وأخرجته بدعم من مؤسسة المهرجان الدولي للفيلم بمراكش."
@@ -561,7 +601,7 @@ const projects={
       "credits": [
         [
           "الفنان البصري وتصحيح الألوان",
-          "عصام دخو"
+          "عصام دوخو"
         ],
         [
           "النحت المركزي",
@@ -611,7 +651,8 @@ const messages={
     "gradeBefore": "{project} — original ungraded frame",
     "gradeAfter": "{project} — final color grade",
     "trailer": "trailer",
-    "showreelRole": "Direction / Film editing / Color grading"
+    "showreelRole": "Direction / Film editing / Color grading",
+    "runtime": "{min} min"
   },
   "fr": {
     "viewAll": "VOIR LES {count} IMAGES",
@@ -633,7 +674,10 @@ const messages={
     "gradeExplain": "{project} — {frame}. Déplacez le curseur pour comparer l’image originale à l’étalonnage final.",
     "gradeBefore": "{project} — image originale",
     "gradeAfter": "{project} — étalonnage final",
-    "showreelRole": "Réalisation / Montage / Étalonnage", "showreelTitle": "Bande démo", "showreelDescription": "Une sélection de mes projets audiovisuels."
+    "showreelRole": "Réalisation / Montage / Étalonnage",
+    "showreelTitle": "Bande démo",
+    "showreelDescription": "Une sélection de mes projets audiovisuels.",
+    "runtime": "{min} min"
   },
   "ar": {
     "viewAll": "عرض جميع اللقطات ({count})",
@@ -655,10 +699,13 @@ const messages={
     "gradeExplain": "{project} — {frame}. حرّك المؤشر للمقارنة بين الصورة الأصلية والتصحيح النهائي.",
     "gradeBefore": "{project} — اللقطة الأصلية",
     "gradeAfter": "{project} — تصحيح الألوان النهائي",
-    "showreelRole": "إخراج / مونتاج / تصحيح الألوان", "showreelTitle": "شريط أعمال مختارة", "showreelDescription": "مجموعة مختارة من أعمال عصام دخو المرئية."
+    "showreelRole": "إخراج / مونتاج / تصحيح الألوان",
+    "showreelTitle": "شريط أعمال مختارة",
+    "showreelDescription": "مجموعة مختارة من أعمال عصام دوخو المرئية.",
+    "runtime": "{min} دقيقة"
   }
 };
-const metadata={en:{title:"Essam Doukhou — Director & Film Editor",description:"Essam Doukhou is a Moroccan director and film editor working on fiction, documentaries, music videos and art projects. Also available for freelance color grading."},fr:{title:"Essam Doukhou — Réalisateur et monteur",description:"Essam Doukhou est un réalisateur et monteur marocain. Fiction, documentaire, clips et art vidéo. Également disponible pour l’étalonnage en freelance."},ar:{title:"عصام دخو — مخرج ومونتير",description:"عصام دخو مخرج ومونتير مغربي يعمل في الأفلام والوثائقيات والفيديوهات الموسيقية والفنون البصرية، ومتاح للعمل الحر في تصحيح الألوان."}};
+const metadata={en:{title:"Essam Doukhou — Director & Film Editor",description:"Essam Doukhou is a Moroccan director and film editor working on fiction, documentaries, music videos and art projects. Also available for freelance color grading."},fr:{title:"Essam Doukhou — Réalisateur & Monteur",description:"Essam Doukhou est un réalisateur et monteur marocain. Fiction, documentaire, clips et art vidéo. Également disponible pour l’étalonnage en freelance."},ar:{title:"عصام دوخو — مخرج ومونتير",description:"عصام دوخو مخرج ومونتير مغربي يعمل في الأفلام والوثائقيات والفيديوهات الموسيقية والفنون البصرية، ومتاح للعمل الحر في تصحيح الألوان."}};
 let lang='en';
 try {const qs=new URLSearchParams(location.search).get('lang');const saved=localStorage.getItem('portfolio-lang');lang=['en','fr','ar'].includes(qs)?qs:(['en','fr','ar'].includes(saved)?saved:'en');}catch(e){}
 const originals=new Map();const listeners=[];

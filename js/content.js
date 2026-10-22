@@ -608,7 +608,8 @@ window.PORTFOLIO_CONTENT = {
       ],
       "videoId": "6N7FtCLsBjw",
       "cover": "1",
-      "description": "An art video made with Canadian performance artist Annie Gagnon. I edited and color graded the performance."
+      "description": "An art video made with Canadian performance artist Annie Gagnon. I edited and color graded the performance.",
+      "durationMinutes": 13
     },
     {
       "id": "weld-sahra",
@@ -693,14 +694,30 @@ window.PORTFOLIO_CONTENT = {
       "title": "Poetry and Music of the Sahara",
       "year": "2020",
       "format": "FEATURE DOCUMENTARY / DOCU-FICTION",
-      "role": "Editing & Color grading",
+      "role": "Direction, Editing & Color grading",
       "tags": [
+        "direction",
         "editing",
         "color"
       ],
       "videoId": "G7FEr_U2byQ",
       "cover": "36",
-      "description": "A feature documentary about Saharan poetry, music and the people who keep these traditions alive. I worked on the editing and color grading."
+      "description": "A feature documentary about Saharan poetry, music and the people who keep these traditions alive. I directed, edited and color graded the film.",
+      "durationMinutes": 60,
+      "credits": [
+        [
+          "Direction",
+          "Essam Doukhou"
+        ],
+        [
+          "Editing",
+          "Essam Doukhou"
+        ],
+        [
+          "Color grading",
+          "Essam Doukhou"
+        ]
+      ]
     },
     {
       "id": "the-star",
@@ -714,7 +731,8 @@ window.PORTFOLIO_CONTENT = {
       "videoId": "kBuHJx_N-sA",
       "cover": "46",
       "description": "A television film made for Al Aoula with Casablanca Pictures. I co-wrote and directed it.",
-      "videoLabel": "WATCH TRAILER"
+      "videoLabel": "WATCH TRAILER",
+      "durationMinutes": 94
     },
     {
       "id": "anti-dream",
@@ -727,7 +745,8 @@ window.PORTFOLIO_CONTENT = {
       ],
       "videoId": "B9bU5wojE5s",
       "cover": "48",
-      "description": "A short fiction film I wrote and directed, supported by the FIFM Foundation."
+      "description": "A short fiction film I wrote and directed, supported by the FIFM Foundation.",
+      "durationMinutes": 15
     },
     {
       "id": "dual-horizon",
@@ -776,7 +795,8 @@ window.PORTFOLIO_CONTENT = {
       ],
       "videoId": "Ddyyo11uMrI",
       "cover": "station-36-new-01",
-      "description": "A short sitcom made with Perfect Productions. I wrote, directed and edited it."
+      "description": "A short sitcom made with Perfect Productions. I wrote, directed and edited it.",
+      "durationMinutes": 13
     }
   ],
   "gradingPair": null,

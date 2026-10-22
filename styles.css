@@ -97,3 +97,15 @@ html[dir="rtl"] .color-points span:before{padding-right:0;padding-left:15px}
 html[dir="rtl"] .contact-section h2 em,html[dir="rtl"] .color-info h2 em{font-family:"Noto Sans Arabic",sans-serif;font-style:normal}
 html[dir="rtl"] .eyeline span:last-child{text-align:start}
 html[dir="rtl"] .grading-chooser,html[dir="rtl"] .comparison-instructions{letter-spacing:normal}
+
+/* V9: project film duration and multilingual name display */
+.project-meta{display:flex;flex-direction:column;align-items:flex-end;gap:7px;padding-top:8px;white-space:nowrap}
+.project-meta .project-year{padding-top:0}
+.project-runtime{font-size:10px;line-height:1.3;letter-spacing:.11em;color:#c8c4b9;font-weight:700;text-transform:uppercase}
+.detail-meta{display:flex;flex-direction:column;align-items:flex-end;gap:6px;white-space:nowrap}
+.detail-duration{font-size:12px;font-weight:700;letter-spacing:.16em;color:#cfbb9d;text-transform:uppercase}
+html[dir="rtl"] .hero h1{direction:rtl;text-align:right}
+html[dir="rtl"] .project-meta,html[dir="rtl"] .detail-meta{align-items:flex-start}
+html[dir="rtl"] .project-runtime,html[dir="rtl"] .detail-duration{letter-spacing:normal}
+html[dir="rtl"] .logo-name,html[dir="rtl"] .footer-name{letter-spacing:normal;font-family:"Noto Sans Arabic","DM Sans",sans-serif}
+@media(max-width:560px){.project-runtime{font-size:10px}.detail-duration{font-size:11px}}

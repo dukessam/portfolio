@@ -115,9 +115,12 @@
     $('project-dialog-title').textContent=v.title;
     $('project-dialog-role').textContent=v.role;
     $('project-dialog-year').textContent=v.year;
+    const runtime=$('project-dialog-duration');
+    runtime.hidden=!p.durationMinutes;
+    if(p.durationMinutes)runtime.textContent=tt('runtime',{min:p.durationMinutes});
     $('project-dialog-description').textContent=v.description;
     const creditBox=$('project-dialog-credits');
-    creditBox.hidden=!(p.credits&&p.credits.length);
+    creditBox.hidden=!(v.credits&&v.credits.length);
     creditBox.innerHTML=(v.credits||[]).map(([label,value])=>`<div><span>${esc(label)}</span><strong>${esc(value)}</strong></div>`).join('');
     const frames=projectStills(p.id);
     $('project-image-grid').innerHTML=frames.map((f,i)=>`<button type="button" class="detail-frame" data-detail-index="${i}" aria-label="${esc(tt('viewDetail',{n:i+1,count:frames.length}))}"><img src="${stillSrc(f.file,true)}" alt="${esc(stillAlt(f))}" loading="lazy"></button>`).join('');
@@ -140,7 +143,7 @@
       const v=tr(p);
       return `<button type="button" class="project-card" data-project="${esc(p.id)}" aria-label="${esc(tt('viewProject',{project:v.title}))}">
         <span class="project-art${p.cover?'':' is-awaiting-stills'}">${p.cover?`<img src="${stillSrc(p.cover)}" srcset="${stillSrc(p.cover,true)} 800w, ${stillSrc(p.cover)} 1600w" sizes="(max-width: 600px) 100vw, 48vw" alt="${esc(tt('stillFrom',{project:v.title}))}" loading="lazy">`:`<span class="project-no-preview">${esc(tt('stillsToFollow'))}</span>`}<span class="project-type">${esc(v.format)}</span>${p.unreleased?`<span class="project-private">${esc(tt('unreleased'))}</span>`:''}<span class="project-icon" aria-hidden="true">↗</span></span>
-        <span class="project-copy"><span><span class="project-name">${esc(v.title)}</span><span class="project-role">${esc(v.role)}</span></span><span class="project-year">${esc(v.year)}</span></span></button>`;
+        <span class="project-copy"><span><span class="project-name">${esc(v.title)}</span><span class="project-role">${esc(v.role)}</span></span><span class="project-meta"><span class="project-year">${esc(v.year)}</span>${p.durationMinutes?`<span class="project-runtime">${esc(tt('runtime',{min:p.durationMinutes}))}</span>`:''}</span></span></button>`;
     }).join('');
     $('project-grid').querySelectorAll('[data-project]').forEach(b=>b.addEventListener('click',()=>{
       const p=projectById(b.dataset.project);if(p)openProject(p,b);
@@ -160,7 +163,7 @@
     const v=p===c.showreel&&I?.getLang()!=='en'
       ? {...p,title:tt('showreelTitle'),role:tt('showreelRole'),description:tt('showreelDescription')}
       : tr(p);
-    $('video-dialog-format').textContent=v.format;
+    $('video-dialog-format').textContent=v.format+(p.durationMinutes?' · '+tt('runtime',{min:p.durationMinutes}):'');
     $('video-dialog-title').textContent=v.title;
     $('video-dialog-role').textContent=v.role;
     $('video-dialog-description').textContent=v.description;
