@@ -14,21 +14,6 @@ window.PORTFOLIO_CONTENT = {
   },
   "heroSlides": [
     {
-      "file": "0",
-      "caption": "SACRED UNION / 2022",
-      "alt": "Silhouetted performers in a lifting pose against a twilight sky"
-    },
-    {
-      "file": "fih-bouya-03",
-      "caption": "FIH BOUYA / AICHA MADO / 2026",
-      "alt": "A smiling singer lifting a pink textile against a clear blue sky"
-    },
-    {
-      "file": "22",
-      "caption": "WELD SAHRA / 2023",
-      "alt": "A singer in a pink suit standing in the desert"
-    },
-    {
       "file": "37",
       "caption": "POETRY AND MUSIC OF THE SAHARA / 2020",
       "alt": "A musician silhouetted in golden desert light"
@@ -39,9 +24,19 @@ window.PORTFOLIO_CONTENT = {
       "alt": "Bare feet sinking into sunlit sand"
     },
     {
-      "file": "station-36",
-      "caption": "STATION 36 / 2021",
-      "alt": "A group gathering inside a decorated cafe"
+      "file": "22",
+      "caption": "WELD SAHRA / 2023",
+      "alt": "A singer in a pink suit standing in the desert"
+    },
+    {
+      "file": "21",
+      "caption": "WELD SAHRA / 2023",
+      "alt": "Saharan singers clapping against the twilight sky"
+    },
+    {
+      "file": "48",
+      "caption": "ANTI-DREAM PILLS / 2017",
+      "alt": "A woman and child sitting together beside a sewing machine"
     },
     {
       "file": "49",
@@ -49,14 +44,39 @@ window.PORTFOLIO_CONTENT = {
       "alt": "Tight close-up of a person’s eyes in low-key light"
     },
     {
-      "file": "farachatoune-09",
-      "caption": "FARACHATOUNE / BOOYA / 2026",
-      "alt": "A performative hand gesture with long sleeves against the horizon"
+      "file": "0",
+      "caption": "SACRED UNION / 2022",
+      "alt": "Silhouetted performers in a lifting pose against a twilight sky"
     },
     {
-      "file": "6",
+      "file": "sacred-union-new-01",
       "caption": "SACRED UNION / 2022",
-      "alt": "A lone performer framed by fire and smoke"
+      "alt": "A performer partly veiled in an amber-lit darkness"
+    },
+    {
+      "file": "sacred-union-new-04",
+      "caption": "SACRED UNION / 2022",
+      "alt": "A dancer extending an arm into the soft light"
+    },
+    {
+      "file": "dual-horizon-new-04",
+      "caption": "DUAL HORIZON / 2024",
+      "alt": "A white masked figure against an early evening sky"
+    },
+    {
+      "file": "station-36-new-05",
+      "caption": "STATION 36 / 2021",
+      "alt": "Two men on a ladder hanging decorations"
+    },
+    {
+      "file": "fih-bouya-03",
+      "caption": "FIH BOUYA / AICHA MADO / 2026",
+      "alt": "A smiling singer lifting a pink textile against a clear blue sky"
+    },
+    {
+      "file": "farachatoune-03",
+      "caption": "FARACHATOUNE / BOOYA / 2026",
+      "alt": "Bare feet moving across dust and trailing fabric"
     }
   ],
   "stills": [
